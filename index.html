@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css"/>
+  <link rel="stylesheet" href="css/app.css" />
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Notable&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="box">
+    <img src="img/layout/logo.png" />
+    <h1>Guess Who</h1>
+  </header>
+
+  <main>
+      <section class="game-start">
+        <h2>Think of Someone...</h2>
+        <button onclick="onStartGuessing()" class="m-3 btn btn-lg btn-dark">I'm Ready!</button>
+      </section>
+      <section class="quest m-3" style="display: none">
+        <h2 class="quest"></h2>
+        <button onclick="onUserResponse('yes')" class="btn btn-info">Yes</button>
+        <button onclick="onUserResponse('no')" class="btn btn-danger">No</button>
+      </section>
+      <section class="new-quest col" style="display: none">
+        <h2>OK, I gave up!</h2>
+
+      <form class="m-8 form-group">
+        <div class="m-3 form-group">
+          <label for="newGuess" class="control-label col-12">You thought of: </label>
+          <div>
+            <input name="newGuess" type="txt" class="form-control mx-auto col-4" id="newGuess" placeholder="Your thought" required>
+          </div>
+        </div>
+        <div class="m-3 form-group">
+          <label for="newQuest" class="control-label col-12">Tell me something else about him/her:</label>
+          <div>
+            <input name="newQuest" type="txt" class="form-control mx-auto col-4" id="newQuest" placeholder="The answer is would be YES to this question"
+              required>
+          </div>
+        </div>
+        <div class="m-3 form-group">
+          <div class="col-md-12">
+            <button type="submit" onclick="onAddGuess();return false;" class="btn btn-light">
+              Make me Smarter!
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  <footer>
+    cofferight &copy; 2016
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/bootstrap.js"></script>
+  <script src="js/quest-service.js"></script>
+  <script src="js/quest-controller.js"></script>
+
+</body>
+
+</html>

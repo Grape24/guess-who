@@ -1,0 +1,38 @@
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Archivo Narrow', sans-serif;
+
+}
+
+header {
+  background-color:rgb(21, 21, 21);
+  text-align: center;
+  color: pink;
+  text-shadow: 2px 2px 0px white;
+  font-size: 3em;
+  font-family: 'Notable', sans-serif;
+}
+
+h2{
+  font-family: 'Notable', sans-serif;
+}
+footer {
+  background-color:  black;
+  text-align: center;
+  color:pink;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
